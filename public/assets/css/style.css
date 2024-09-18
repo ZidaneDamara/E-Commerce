@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+}
+/* Navbar */
+nav {
+  border-bottom: 1px solid #f1d6c6;
+}
+nav .container span.orange {
+  color: #ff9d2e;
+}
+nav .nav-link:hover {
+  color: #ff9d2e;
+}
+nav .button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0.4rem 1.7rem;
+  background-color: #ff9d2e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+}
+
+nav .button:hover::before {
+  transform: scaleX(1);
+}
+
+nav .button-content {
+  position: relative;
+  z-index: 1;
+}
+
+nav .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background-color: black;
+  transition: all 0.475s;
+}
+/* AKHIR NAVBAR */
+
+/* HERO SECTION */
+.hero {
+  overflow: hidden;
+  height: 100vh;
+  background: url(../fig/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main-hero {
+  padding-top: 20rem;
+  padding-left: 2rem;
+}
+.text-hero {
+  font-family: "Shadows Into Light", sans-serif;
+  font-size: 2.7rem;
+  color: #ff9d2e;
+}
+.text-hero-2 {
+  color: #f1d6c6;
+}
+.text-hero-3 {
+  color: #f1d6c6;
+}
+.img-hero-1 {
+  opacity: 0;
+}
+.img-hero-2 {
+  opacity: 0;
+}
+.img-hero-3 {
+  opacity: 0;
+}
+/* AKHIR HERO SECTION */
+
+/* MENU SECTION */
+.menu {
+  background-color: #f9f6f0;
+  position: relative;
+}
+li {
+  list-style-type: none;
+  margin-inline: 1rem;
+}
+.list-name {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-menu {
+  position: relative;
+  transition: 0.6s;
+}
+.card-menu:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
+}
+.btn-menu {
+  background-color: #f42f25;
+  color: #fff;
+  transition: 0.8s;
+  position: absolute;
+  top: 38%;
+  left: 29%;
+  opacity: 0;
+  transform: translateY(13px);
+}
+.card-menu:hover .btn-menu {
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-13px);
+}
+.btn-menu:hover {
+  background-color: #ff9d2e;
+}
+.img-shape {
+  transform: scale(1.1);
+  width: 100%;
+  bottom: -1rem;
+  position: absolute;
+  transform: rotate(180deg);
+}
+/* AKHIR MENU SECTION */
+
+/*  PROMO-1 SECTION  */
+.promo-1 {
+  background: url(../fig/hero-bg.jpg);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.sale-1 {
+  position: relative;
+}
+.sale-shape {
+  position: absolute;
+  left: -5rem;
+  top: -5rem;
+  transform: scale(0.7);
+  animation: scale 2s infinite alternate linear;
+}
+.img-shape-promo-1 {
+  transform: scale(1.1);
+  width: 100%;
+  top: -1rem;
+  position: absolute;
+  transform: rotate(180deg);
+}
+/* AKHIR PROMO-1 SECTION */
+
+/* PROMO-2 SECTION */
+.promo-2 {
+  position: relative;
+  overflow: hidden;
+}
+.card-1 {
+  position: relative;
+  overflow: hidden;
+}
+.img-promo2 {
+  transition: 1s;
+}
+.card-1:hover .img-promo2 {
+  transform: scale(1.2);
+}
+.text-card-1 {
+  position: absolute;
+  top: 0;
+}
+.img-shape-promo {
+  transform: scale(1.1);
+  width: 100%;
+  bottom: -1rem;
+  position: absolute;
+}
+/* AKHIR PROMO-2 SECTION  */
+
+/* FOOTER */
+footer {
+  position: relative;
+  background-color: #f9f6f0;
+  height: 500px;
+}
+.img-footer-1 {
+  position: absolute;
+  bottom: 0;
+  left: -9rem;
+  z-index: 999;
+  animation: translate2 6s alternate infinite backwards linear;
+}
+.img-footer-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+/* AKHIR FOOTER */
+
+/* Breakpoints */
+@media (min-width: 768px) {
+  /* NAVBAR */
+  nav .nav-link {
+    color: #f1d6c6;
+    transition: 0.2s ease-in;
+  }
+  .img-hero-1 {
+    opacity: 1;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+  .img-hero-2 {
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: scale(1.2);
+  }
+  .img-hero-3 {
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* HERO SECTION */
+  .main-hero-1 {
+    display: flex !important;
+    justify-content: start !important;
+    text-align: left !important;
+  }
+
+  /* MENU SECTION */
+  .btn-menu {
+    background-color: #f42f25;
+    color: #fff;
+    transition: 0.8s;
+    position: absolute;
+    top: 33%;
+    left: 24%;
+    opacity: 0;
+    transform: translateY(13px);
+  }
+}
+@media (min-width: 1000px) {
+  /* PROMO-1 SECTION */
+  .img-sale {
+    transform: scale(1.4);
+  }
+  .sale-shape {
+    position: absolute;
+    left: -8rem;
+    top: -5rem;
+    transform: scale(0.7);
+    animation: scale 2s infinite alternate linear;
+  }
+  .img-footer-1 {
+    position: absolute;
+    bottom: 0;
+    left: -9rem;
+    z-index: 999;
+    animation: translate 6s alternate infinite backwards linear;
+  }
+}
+
+@media (min-height: 900px) {
+  .main-hero {
+    padding-top: 30rem;
+  }
+}
+
+/* ANIMASI */
+@keyframes scale {
+  0% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes translate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100rem);
+  }
+}
+@keyframes translate2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(70rem);
+  }
+}
